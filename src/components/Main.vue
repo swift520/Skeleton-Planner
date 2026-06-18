@@ -31,7 +31,7 @@ function restartRealVideos() {
   <div style="height: 48px;"></div>
     <el-row justify="center" style="margin-bottom: 36px;">
       <el-col :xs="24" :sm="22" :md="22" :lg="20" :xl="16">
-        <h1 class="section-title" style="margin-bottom: 28px;">Skeleton-Guided Mapless Navigation via Neural Scene Reconstruction for Dynamic Unstructured Environments</h1>
+        <h1 class="section-title" style="margin-bottom: 28px;">Skeleton-Guided Navigation with Neural Scene Reconstruction in Unknown Environments</h1>
       </el-col>
     </el-row>
 
@@ -47,8 +47,8 @@ function restartRealVideos() {
                 In the front end, a lightweight perception network captures real-time environmental dynamics and estimates occupancy states in occluded regions. 
                 An explicit memory module leverages the translation equivariance of convolutional networks to effectively mitigate observational blind spots and long-term memory drift. 
                 In the back end, the predicted free space is abstracted into a sparse topological skeleton graph that extracts structurally invariant environmental features. 
-                Serving as a compact, high-level representation that fully preserves spatial connectivity, this graph enables efficient reachability analysis and trajectory optimization with strong adaptability to obstacles of different scales. 
-                Extensive experiments demonstrate that the proposed method effectively resists dynamic disturbances and maintains stable, globally consistent navigation performance.
+                Serving as a compact, high-level representation that largely preserves spatial connectivity, this graph enables efficient reachability analysis and trajectory optimization with strong adaptability to obstacles of different scales. 
+                Both simulation and real-world experiments demonstrate that the proposed method maintains reliable static reconstruction under dynamic disturbances and achieves stable, globally consistent navigation performance.
             </p>
         </el-col>
     </el-row>
@@ -58,7 +58,7 @@ function restartRealVideos() {
     <el-divider />
 
     <el-row justify="center">
-      <h2 class="section-title" style="margin-bottom: 12px;">Dynamic Simulation Visualization</h2>
+      <h2 class="section-title" style="margin-bottom: 12px;">Dynamic Simulations</h2>
     </el-row>
 
     <el-row justify="center" style="margin-bottom: 36px;">
@@ -67,7 +67,7 @@ function restartRealVideos() {
           Experiments were conducted in two static scene configurations containing dynamic cylindrical obstacles. The maximum speed of the robot was set to 3 m/s, while the velocity of the dynamic obstacles was limited to 1 m/s. The effective detection range of the simulated LiDAR was 10 m, and the BEV projection covered an area of 6.4 m × 6.4 m.
         </p>
         <p style="margin-bottom: 12px;">
-          (1) Cave-Like Scenario: Irregular clustered structures generated from a 2D Perlin noise field.
+          (1) Cave-Like Scenario: Irregular clustered structures are generated from a 2D Perlin noise field.
         </p>
 
         <el-row justify="center" gutter="10">
@@ -96,8 +96,9 @@ function restartRealVideos() {
             </div>
           </el-col>
         </el-row>
-        <div style="height: 6px;"></div>
+        <div style="height: 16px;"></div>
         <el-row >
+          <img src="/public/node.png" alt="obs40" style="width:100%;max-width:640px;object-fit:contain;display:block;margin:auto;" />
           <p class="p0">
           * The video is played at 1.3× playback speed. It shows a composite visualization including: (i) the BEV projection, static occupancy map, and dynamic obstacle motion predictions produced by the perception network (top-left); (ii) the globally fused static occupancy map (bottom-left); and (iii) the simulation environment, sparse skeleton graph, and planned trajectory (right).
           </p>
@@ -113,7 +114,7 @@ function restartRealVideos() {
     <el-row justify="center" style="margin-bottom: 6px;">
       <el-col :xs="24" :sm="22" :md="20" :lg="20" :xl="18">
         <p style="margin-bottom: 12px;">
-          (2) Maze-Like Scenario: Connected walls with randomly varying thickness are arranged on a 9 × 14 grid.
+          (2) Maze-Like Scenario: Connected walls with randomly varying thicknesses are arranged on a 9 × 14 grid.
         </p>
                 <el-row justify="center" gutter="10">
           <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" style="display:flex;justify-content:center;">
@@ -141,8 +142,9 @@ function restartRealVideos() {
             </div>
           </el-col>
         </el-row>
-        <div style="height: 6px;"></div>
+        <div style="height: 16px;"></div>
         <el-row >
+          <img src="/public/node.png" alt="obs40" style="width:100%;max-width:640px;object-fit:contain;display:block;margin:auto;" />
           <p class="p0">
           * The video is played at 1.5× playback speed. It shows a composite visualization including: (i) the BEV projection, static occupancy map, and dynamic obstacle motion predictions produced by the perception network (top-left); (ii) the globally fused static occupancy map (bottom-left); and (iii) the simulation environment, sparse skeleton graph, and planned trajectory (right).
           </p>
@@ -164,7 +166,7 @@ function restartRealVideos() {
     <el-row justify="center" style="margin-bottom: 36px;">
       <el-col :xs="24" :sm="22" :md="20" :lg="18" :xl="16">
         <p style="margin-bottom: 16px;">
-          Four representative real-world environments were constructed, featuring common static obstacles such as walls, tables, bushes, bicycles, and stone piers. A rectangular board pushed by a pedestrian was used as the dynamic obstacle. The unmanned vehicle operated at a maximum speed of 1 m/s.
+          Four representative real-world environments were constructed, featuring common static obstacles such as walls, tables, bushes, bicycles, and stone piers.  Rectangular boards pushed by pedestrians were used as dynamic obstacles. The unmanned vehicle operated at a maximum speed of 1 m/s.
         </p>
 
         <el-row justify="center" gutter="20" style="margin-bottom: 16px;">
@@ -203,12 +205,13 @@ function restartRealVideos() {
           </div>
           </el-col>
         </el-row>
-        <div style="height: 6px;"></div>
+        <div style="height: 16px;"></div>
+        <img src="/public/node.png" alt="obs40" style="width:100%;max-width:640px;object-fit:contain;display:block;margin:auto;" />
         <p class="p0">
-          *  The video is played at 2.0× playback speed. It shows rear-view footage recorded by a handheld camera, constructed static occupancy maps, localization and mapping results generated by Fast-LIO2, as well as the overlaid skeleton graphs.
+          *  The video is played at 2.0× playback speed. It shows rear-view footage recorded by a handheld camera, the constructed static occupancy map, the localization and mapping result generated by Fast-LIO2, and the overlaid skeleton graph.
         </p>  
         <p class="p0">
-          *  In the outdoor scenario, the maximum lateral exploration range is limited to 16 m. Nodes whose y-coordinates exceed ±16 m are not assigned frontier attributes. Consequently, in the final demonstration, the planner resorts to a backtracking strategy to search for a feasible path.
+          *  In the outdoor scenario, the maximum lateral exploration range is limited to 16 m. Nodes whose y-coordinates exceed ±16 m are not assigned frontier attribute. Consequently, in the final demonstration, the resulting motion exhibits a backtracking-like behavior while searching for a feasible path.
         </p>
         <el-row justify="center">
           <el-button type="primary" @click="restartRealVideos" class="custom-button">Restart Videos</el-button>
