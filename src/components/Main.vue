@@ -31,7 +31,7 @@ function restartRealVideos() {
   <div style="height: 48px;"></div>
     <el-row justify="center" style="margin-bottom: 36px;">
       <el-col :xs="24" :sm="22" :md="22" :lg="20" :xl="16">
-        <h1 class="section-title" style="margin-bottom: 28px;">Skeleton-Guided Navigation with Neural Scene Reconstruction in Unknown Environments</h1>
+        <h1 class="section-title" style="margin-bottom: 28px;">Neural Scene Reconstruction and Skeleton-Guided Navigation for Industrial Mobile Robots in Unknown Environments</h1>
       </el-col>
     </el-row>
 
@@ -42,13 +42,13 @@ function restartRealVideos() {
             <!-- <h1 style="margin-bottom: 20px;">摘要</h1> -->
             <img src="/public/framework.png" alt="Logo" style="width:100%;margin-bottom:12px;border-radius:10px;" />
             <p style="margin-bottom: 16px;">
-                Perception and planning in complex, dynamic, and unstructured environments remain critical bottlenecks for achieving robust and high-precision autonomous navigation of mobile robots.
-                This paper proposes a two-stage framework that integrates learning-based environment reconstruction with skeleton-guided path planning. 
-                In the front end, a lightweight perception network captures real-time environmental dynamics and estimates occupancy states in occluded regions. 
-                An explicit memory module leverages the translation equivariance of convolutional networks to effectively mitigate observational blind spots and long-term memory drift. 
-                In the back end, the predicted free space is abstracted into a sparse topological skeleton graph that extracts structurally invariant environmental features. 
-                Serving as a compact, high-level representation that largely preserves spatial connectivity, this graph enables efficient reachability analysis and trajectory optimization with strong adaptability to obstacles of different scales. 
-                Both simulation and real-world experiments demonstrate that the proposed method maintains reliable static reconstruction under dynamic disturbances and achieves stable, globally consistent navigation performance.
+                Industrial mobile robots rely on real-time spatial information acquisition, reconstruction, and utilization to operate in complex, unknown, and dynamic environments. 
+                However, onboard perception and navigation are frequently challenged by dynamic obstacles, occlusions, limited sensing ranges, and unstructured obstacle layouts. 
+                This paper proposes a two-stage framework that integrates learning-based environment reconstruction with skeleton-guided path planning for industrial mobile robots. 
+                In the front end, a lightweight perception network captures real-time environmental dynamics and estimates occupancy states in occluded regions from onboard LiDAR observations. 
+                An explicit memory module leverages the translation equivariance of convolutional networks to transform temporal observations into spatially aligned memory representations, thereby mitigating observational blind spots and long-term memory drift. 
+                In the back end, the predicted free space is abstracted into a sparse topological skeleton graph that provides compact structural information for reachability analysis and trajectory optimization. This representation largely preserves spatial connectivity and adapts to obstacles of different scales. 
+                Both simulation and real-world experiments demonstrate that the proposed method maintains reliable static-scene reconstruction under dynamic disturbances and achieves stable, globally consistent navigation with real-time onboard information processing and decision-making.
             </p>
         </el-col>
     </el-row>
